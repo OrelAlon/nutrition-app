@@ -1,38 +1,253 @@
+/* background-color: #282c34; */
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Acme", sans-serif;
+
+  /* background: rgba(214, 218, 223, 0.1); */
+}
+body {
+  font-family: "Acme", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userResult {
+  border: solid green 2px;
+}
+/* open btn nav bar! */
+#mySidenav {
+  color: #222;
+}
+#mySidenav span {
+  position: absolute;
+  left: -100px;
+  transition: 0.6s;
+  padding: 15px;
+  width: 115px;
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+  border-radius: 0 5px 5px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#mySidenav span:hover {
+  left: 0;
+  color: #222;
+  font-weight: bold;
+
+  /* background-position: right center; */
+}
+#start {
+  top: 80px;
+
+  background-image: linear-gradient(
+    to right,
+    #84fab0 0%,
+    #8fd3f4 51%,
+    #84fab0 100%
+  );
+}
+
+#about {
+  top: 140px;
+  background-image: linear-gradient(
+    to right,
+    #fbc2eb 0%,
+    #a6c1ee 51%,
+    #fbc2eb 100%
+  );
+}
+#recipe {
+  top: 200px;
+  background-image: linear-gradient(
+    to right,
+    #ffecd2 0%,
+    #fcb69f 51%,
+    #ffecd2 100%
+  );
+}
+.divDay {
+  margin: auto;
+  margin-top: 30px;
+  height: 100px;
+  /* width: 60%; */
+  text-decoration: none;
+  color: rgb(46, 44, 44);
+  box-shadow: rgba(56, 50, 50, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 5px;
+  border: solid rgb(161, 159, 159) 1px;
+}
+.divWeek {
+  margin: auto;
+  width: 55%;
+}
+.divWeek:hover .divDay {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.divWeek:hover .divDay:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.alignleft {
+  margin: 30px;
+  font-weight: bold;
+  font-size: 30px;
+
+  float: left;
+}
+.alignright {
+  margin: 40px;
+  float: right;
+  /* margin-left: 250px; */
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+.foodDiv {
+  border: solid palevioletred 2px;
+  width: 400px;
+  margin: auto;
+  margin-top: 15px;
+}
+.foodImg {
+  width: 100px;
+  border-radius: 40%;
+  margin: 10px;
+}
+
+/* style for btn */
+
+.effect1 {
+  border: none;
+  margin-top: 20px;
+  color: #222;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  padding: 10px 50px 10px 20px;
+
+  -webkit-transition: all 0s;
+
+  -o-transition: all 0.6s;
+
+  transition: all 0.6s;
+
+  -webkit-transform: scale(1.5);
+
+  -ms-transform: scale(1.5);
+
+  transform: scale(1.5); /*change scale(3) to scale(1)*/
+}
+
+.effect1 .bg {
+  background: #222;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 5px;
+  margin-top: -1px;
+  z-index: -1;
+
+  -webkit-transition: all 0.6s;
+
+  -o-transition: all 0.6s;
+
+  transition: all 0.6s;
+}
+
+.effect1:hover {
+  padding-right: 20px;
+  color: #fff;
+}
+
+.effect1:hover .bg {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.effect1 .bg:before,
+.effect1 .bg:after {
+  content: "";
+  height: 2px;
+  width: 10px;
+  background: #222;
+  position: absolute;
+  right: -2px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.effect1 .bg:before {
+  bottom: 3px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.effect1 .bg:after {
+  top: 3px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.effect1:hover .bg:before,
+.effect1:hover .bg:after {
+  right: 0;
+}
+
+.effect1:hover .bg:before {
+  bottom: 6px;
+}
+
+.effect1:hover .bg:after {
+  top: 6px;
+}
+#red {
+  color: rgb(233, 22, 22);
+  font-weight: bold;
+  float: left;
+  margin-top: 60px;
+}
+#green {
+  color: #07792d;
+  font-weight: bold;
+  float: right;
+  margin-top: 60px;
+}
+.btnDiv {
+  border: rgb(10, 9, 9) solid;
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+#resultBtn {
+  background-color: #30a030;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .alignleft {
+    margin: 10px;
+    font-size: 16px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .divWeek {
+    margin: auto;
+    width: 90%;
   }
 }
