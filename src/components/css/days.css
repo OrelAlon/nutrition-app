@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  } */
+
+html,
+body {
+  background-color: #c8c3c3;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.dataBox {
+  padding: 20px;
+  background-color: whitesmoke;
+  width: 40%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px 5px;
+}
+.dataBox p {
+  letter-spacing: 1px;
+}
+.searchBtn {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+.search-bar input {
+  margin-top: 50px;
+  height: 44px;
+  width: 44px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 44px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  color: transparent;
+}
+
+.search-bar input:hover {
+  /* background: rgba(0, 200, 0, 0.3); */
+
+  box-shadow: 0px 0px 30px rgba(70, 73, 70, 0.8);
+}
+
+input:focus,
+input:valid {
+  width: 17rem;
+  border: 20px/10 solid #ccc;
+  outline: none;
+  cursor: auto;
+  background-color: #fff;
+  color: #000;
+}
+.section {
+  padding: 40px 0;
+  margin-top: 10px;
+}
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+.grid {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+  margin: auto;
+
+  /* grid-template: 1fr / repeat(3, 1fr);
+    grid-gap: 25px; */
+}
+.card {
+  border: solid rgb(231, 100, 144);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* position: relative; */
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+  /* margin: 10px auto; */
+  background-color: #d8d4d4;
+
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 15px;
+}
+
+.card__image {
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  z-index: 2;
+
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  border-radius: 50%;
+  /* border: solid black 1px; */
+}
+.card__image :hover {
+  transform: translateY(4px);
+}
+.card__info {
+  padding: 0 10px;
+  margin-top: 25px;
+}
+.gram-div {
+  margin-top: 10px;
+}
+.card__info h2 {
+  font-size: 14px;
+  font-weight: 800;
+  width: 95%;
+  text-decoration: underline;
+}
+.card__info p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #797979;
+  margin: 8px;
+}
+
+.card__cal {
+  height: 30px;
+  padding: 0 10px 0 20px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+.card__add {
+  overflow: hidden;
+  width: 35px;
+  height: 30px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #222222;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+.card__add:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  background-color: green;
+}
+.card__add:active {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.foodBoxInfo {
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 60%;
+  height: 90px;
+  margin: auto;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.foodBoxInfo h2 {
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.iconDel {
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+  color: red;
+  margin-right: 15px;
+}
+.iconDel :active {
+  box-shadow: 0px 0px 30px rgba(70, 73, 70, 0.8);
+  border: burlywood;
+}
+.foodBoxInfo p {
+  margin: auto;
+  text-align: center;
+  text-decoration: underline;
+  margin-right: 30px;
+}
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+body {
+  font-family: "RocknRoll One";
+}
+
+.dayTitle {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 0.75;
+}
+/* on search btn */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(152, 152, 152, 0.43); /*IconColor*/
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 2px #00000030;
+  border-bottom: solid 2px #b5b5b5;
+  margin-left: 15px;
+}
+.fa {
+  line-height: 80px;
+  margin-top: -35px;
+  color: #797979;
+}
+.btn:hover {
+  border: #797979 solid 1px;
+  box-shadow: 0px 0px 30px rgba(70, 73, 70, 0.8);
+}
+.btn:active {
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); /*Move down*/
+  border-bottom: none; /*disappears*/
+}
+
+.saveFoodContainer {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+  .grid {
+    width: 85%;
+  }
+  .card {
+    border: solid palevioletred;
+    /* position: relative; */
+    width: 350px;
+    height: 300px;
+    margin-right: 20px;
+  }
+  .foodBoxInfo {
+    width: 90%;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+  }
+  .fa {
+    line-height: 40px;
+    font-size: 25px;
+    margin-top: -65px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  input:focus,
+  input:valid {
+    width: 15rem;
+  }
+}

@@ -21,7 +21,7 @@ body {
 }
 #mySidenav span {
   position: absolute;
-  left: -100px;
+  left: -120px;
   transition: 0.6s;
   padding: 15px;
   width: 115px;

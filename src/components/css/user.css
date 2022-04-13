@@ -1,0 +1,163 @@
+body {
+  font-family: "Acme", sans-serif;
+}
+
+.form-control {
+  width: 400px;
+  margin: auto;
+}
+.form-gender {
+  list-style-type: none;
+  margin: 20px;
+  font: fallback;
+}
+.landingContainer {
+  border: solid 2px black;
+  width: 50%;
+  margin: auto;
+  margin-top: 60px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  margin: 20px;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label::before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+.liGender {
+  display: inline-block;
+}
+input[type="radio"] {
+  display: none;
+  border: violet solid;
+}
+.errorMsg {
+  border: 1px solid;
+  width: 30%;
+  margin: 10px 0px;
+  margin: auto;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #9f6000;
+  background-color: #feefb3;
+  background-image: url("https://i.imgur.com/Z8q7ww7.png");
+}
+.info {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 7px 10px 7px 50px;
+  width: 360px;
+  margin: auto;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.info {
+  color: #00529b;
+  background-color: #bde5f8;
+  background-image: url("https://i.imgur.com/ilgqWuX.png");
+}
+
+.showResult {
+  margin-top: -550px;
+  background: url(../css/img/fruitbackground.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+
+.showResultContent {
+  margin: auto;
+  margin-top: 50px;
+}
+.imgGender {
+  width: 100px;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+h1 {
+  font-family: "Acme", sans-serif;
+  font-size: 1.2rem;
+}
+.wrapper {
+  display: inline-block;
+}
+#wrapper {
+  margin: 30px;
+  margin-left: -10px;
+  text-decoration: underline;
+  text-shadow: 5px 5px 10px black;
+  font-size: 30px;
+}
+.wrapper h1,
+#wrapper {
+  margin-top: 15px;
+  border-right: 4px solid #fff;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(24, end), blink 1s step-end infinite;
+}
+.boxResult {
+  background-color: rgb(54, 51, 51);
+  width: 120px;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 18px;
+  color: whitesmoke;
+}
+.resultInput {
+  text-align: center;
+  width: 120px;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.healthyFoodImg {
+  border-radius: 60px;
+  border: solid black 1px;
+  margin: 40px;
+  width: 30vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .imgGender {
+    width: 80px;
+  }
+  .landingContainer {
+    width: 75%;
+    /* margin: 15px; */
+  }
+}

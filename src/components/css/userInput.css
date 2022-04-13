@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  font-family: "Acme", sans-serif;
+}
+
+div.inputFilledDiv {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 21rem;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Input*/
+.labelInput > input {
+  border: none;
+  text-align: center;
+  border-bottom: 0.325rem solid rgba(15, 15, 17, 0.6);
+  width: 100%;
+  height: 2.8rem;
+  font-size: 1.0625rem;
+  padding-left: 0.875rem;
+  line-height: 147.6%;
+  padding-top: 0.825rem;
+  padding-bottom: 0.5rem;
+}
+
+.labelInput > input:focus {
+  outline: none;
+}
+
+.labelInput > .spanNameInput {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  line-height: 147.6%;
+  color: rgba(19, 19, 21, 0.6);
+  transition: top 0.2s;
+}
+
+.labelInput > input:hover {
+  background: rgba(73, 133, 224, 0.12);
+  border-color: #ffffff;
+}
+
+.labelInput > input:focus + .spanNameInput,
+.labelInput > input:valid + .spanNameInput {
+  top: 0;
+  font-size: 0.9375rem;
+  margin-bottom: 32px;
+}
+
+.omrs-input-underlined > input:disabled {
+  background: #eff1f2;
+  cursor: not-allowed;
+}
+.labelInput > input {
+  background: #eff1f2;
+}
+
+@media only screen and (max-width: 1000px) {
+  div.inputFilledDiv {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
