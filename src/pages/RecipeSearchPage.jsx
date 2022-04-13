@@ -1,8 +1,71 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { fetchRecipeSearch } from "../api/ApiFatch";
+
+import ResipesDisplay from "../components/recipes/ResipesDisplay";
+import Spinner from "../components/Spinner";
+
+import { ImSearch } from "react-icons/im";
+import { BiCalendarWeek } from "react-icons/bi";
+
+import "../components/css/recipeSearch.css";
+
 const RecipeSearchPage = () => {
+  const [recipeSearch, setRecipeSearch] = useState("");
+  const [recipeHits, setRecipeHits] = useState([]);
+  const [errorMsg, setErrorMsg] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSearchRecipe = async () => {
+    setRecipeHits([]);
+    setIsLoading(true);
+
+    try {
+      setIsLoading(true);
+
+      const { data } = await fetchRecipeSearch(recipeSearch);
+      if (!data.more) {
+        return setErrorMsg("Sorry but there is no such name");
+      }
+      setErrorMsg("");
+      const recipeHits = data.hits.slice(0, 3);
+      setRecipeHits(recipeHits);
+      setIsLoading(false);
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
   return (
     <div>
-      <h1>search!</h1>
-      RecipeSearchPage
+      <div className="title">
+        <h1 className="dayTitle">Cook an idea...</h1>
+      </div>
+      <div>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search your Recipe here..."
+            value={recipeSearch}
+            onChange={(event) => setRecipeSearch(event.target.value)}
+          ></input>
+          <span href="#" className="btn">
+            <ImSearch className="fa " onClick={onSearchRecipe} />
+          </span>
+          <Link to="/weeklyDayPage">
+            <span href="#" className="btn">
+              <BiCalendarWeek className="fa " />
+            </span>
+          </Link>
+        </div>
+      </div>
+      <div>
+        {isLoading && <Spinner />}
+        {errorMsg.length > 0 && <div className="errorMsg">{errorMsg}</div>}
+        {recipeHits.map((recipe, index) => (
+          <ResipesDisplay key={index} recipe={recipe} />
+        ))}
+      </div>
     </div>
   );
 };

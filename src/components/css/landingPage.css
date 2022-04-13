@@ -80,7 +80,7 @@ input[type="radio"] {
 }
 
 .showResult {
-  margin-top: -550px;
+  /* margin-top: -550px; */
   background: url(../css/img/fruitbackground.jpg) no-repeat center center/cover;
   height: 100vh;
   width: 100vw;
@@ -89,7 +89,11 @@ input[type="radio"] {
   left: 0;
   top: 0;
 }
-
+/* #myForm input {
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+  } */
 .showResultContent {
   margin: auto;
   margin-top: 50px;

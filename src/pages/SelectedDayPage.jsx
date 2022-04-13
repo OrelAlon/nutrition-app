@@ -12,7 +12,7 @@ import { BiCalendarWeek } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { ImSearch } from "react-icons/im";
 
-import "../components/css/days.css";
+import "../components/css/page.css";
 
 const SelectedDayPage = () => {
   const params = useParams();

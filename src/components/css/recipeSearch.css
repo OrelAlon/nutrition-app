@@ -1,0 +1,90 @@
+.food {
+  width: 60%;
+  /* display: flex; */
+  margin: 20px auto;
+  text-align: left;
+}
+
+.food .food-description .food1 {
+  display: flex;
+  /* position: relative; */
+  margin: auto;
+  background-color: #ddd6d6;
+  /* width: 35vw; */
+  height: 165px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 2px 4px 8px #e2e2e2;
+}
+.iningredientsDiv {
+  background-color: #ddd6d6;
+}
+.food .food-description .food1 .food-img {
+  width: 140px;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  /* border-bottom: #ec7483; */
+}
+.food .food-description .food1 .food-text .text1-food {
+  padding-left: 16px;
+  color: #1f1d1d;
+  font-size: 16px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.food-text {
+  margin: 10px 0 0 30px;
+}
+.food .food-description .food1 .food-text .text2-food {
+  color: #5d5c5c;
+  padding-left: 22px;
+  margin-top: 5px;
+}
+.food .food-description .food1 .food-text .text3-food {
+  padding-left: 22px;
+  color: #6b6b6b;
+}
+.food .food-description .text4-food {
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.searchBarRec input {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 44px;
+  cursor: pointer;
+  background-color: pink;
+  /* color: transparent; */
+}
+.iconPeople,
+.iconCal {
+  font-size: 18px;
+  margin-top: -5px;
+}
+.iconArrow,
+.iconCloseLock {
+  font-size: 30px;
+  margin-top: -12px;
+  color: black;
+}
+.iconCloseLock {
+  color: red;
+}
+.iconArrow {
+  color: green;
+}
+@media only screen and (max-width: 1000px) {
+  .food-text {
+    display: none;
+  }
+  .search-bar input:valid {
+    width: 178px;
+  }
+}

@@ -10,7 +10,6 @@ const WeeklyDayPage = () => {
     "friday",
     "saturday",
   ];
-  // const [daysWeek, setDaysWeek] = useState(week);
 
   return (
     <div className="divWeek">

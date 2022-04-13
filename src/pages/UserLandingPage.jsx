@@ -6,8 +6,7 @@ import Button from "../components/Button";
 
 import HealthyFood from "../components/css/img/healthyFood.jpg";
 
-import "../App.css";
-import "../components/css/user.css";
+import "../components/css/landingPage.css";
 
 const UserLandingPage = () => {
   const [userInfo, setUserInfo] = useState({

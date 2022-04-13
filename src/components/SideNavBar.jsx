@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
+import "../App.css";
+
 const SideNavBar = () => {
   return (
     <>
-      <div className="">
+      <div>
         <Link to="/">
           <div id="mySidenav" className="sidenav">
             <span href="#" id="start">
@@ -11,7 +13,7 @@ const SideNavBar = () => {
             </span>
           </div>
         </Link>
-        <Link to="/weeklyPage">
+        <Link to="/weeklyDayPage">
           <div id="mySidenav" className="sidenav">
             <span href="#" id="about">
               My-Week 📅
