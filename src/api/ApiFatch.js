@@ -1,10 +1,12 @@
 import axios from "axios";
 
 export async function fetchFoodSearch(searchFood) {
-  const API_ID = process.env.REACT_APP_API_ID;
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  console.log(API_ID);
-  console.log(API_KEY);
+  const API_ID = "a9080630";
+  const API_KEY = "016eaef3bd150a51f2c3ff54fe5b5ccd";
+  // const API_ID = process.env.REACT_APP_API_ID;
+  // const API_KEY = process.env.REACT_APP_API_KEY;
+  // console.log(API_ID);
+  // console.log(API_KEY);
   const fixSpaceStr = searchFood.replace(/\s+/g, "%20");
 
   const { data } = await axios.get(
