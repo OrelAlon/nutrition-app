@@ -14,13 +14,13 @@ const UserLandingPage = () => {
     height: "",
     weight: "",
     age: "",
-    // gender: '',
   });
   const [error, setError] = useState("");
   const [displayResult, setDisplayResult] = useState(false);
   const [gender, setGender] = useState("");
   const [Bmr, setBmr] = useState("");
   const [selected, setSelected] = useState("");
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setUserInfo({
@@ -63,7 +63,6 @@ const UserLandingPage = () => {
   };
   const updateBmr = (e) => {
     setSelected(e.userBmr);
-    // passBmr(selected);
   };
 
   return (

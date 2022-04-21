@@ -1,6 +1,6 @@
 import { useSpring, animated } from "react-spring";
 
-const SingleRecipeData = ({ ingredients }) => {
+const SingleRandomData = ({ extendedIngredients }) => {
   const props = useSpring({
     vector: [40, 30, 30],
     display: "grid",
@@ -22,12 +22,12 @@ const SingleRecipeData = ({ ingredients }) => {
   return (
     <div className="iningredientsDiv">
       <animated.div style={props}>
-        {ingredients.map((item, index) => (
-          <li key={index}>{item.text}</li>
+        {extendedIngredients.map((item, index) => (
+          <li key={index}>{item.name}</li>
         ))}
       </animated.div>
     </div>
   );
 };
 
-export default SingleRecipeData;
+export default SingleRandomData;

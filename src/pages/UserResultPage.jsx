@@ -15,9 +15,9 @@ const UserResultPage = ({ bmr, confirmBmr }) => {
 
     confirmBmr({ userBmr });
     db.writeData({ userBmr: userBmr || bmr });
-    //localStorage.setItem('data', JSON.stringify({ userBmr: userBmr || bmr }));
     navigate("/weeklyDayPage");
   };
+
   return (
     <div>
       <form>

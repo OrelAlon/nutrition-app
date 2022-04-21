@@ -9,7 +9,7 @@ const SideNavBar = () => {
         <Link to="/">
           <div id="mySidenav" className="sidenav">
             <span href="#" id="start">
-              Change My Details
+              Rest My Details
             </span>
           </div>
         </Link>
