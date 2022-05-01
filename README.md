@@ -1,6 +1,6 @@
 # Getting Started my nutrition-tracking-app with React
 
-You can check the site through [nutrition-tracking-app](https://nutrition-tracking-app.netlify.app/).
+You can check the site through [nutrition-app](https://nutrition-tracking-app.netlify.app/).
 
 ## Available options:
 
